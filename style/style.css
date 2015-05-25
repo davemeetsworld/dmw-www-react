@@ -1,0 +1,68 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.sitecontainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 740px;
+  height: 710px;
+}
+
+.headcontent {
+  width: 740px;
+  height: 145px;
+}
+
+.headmenucontent {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Styles for React Header */
+
+.titletext {
+  font-size: 64px;
+}
+
+.imghead {
+  display: block;
+  float: left;
+}
+
+.pic {
+  max-height: 60px;
+  max-width: 60px;
+  padding: 49px;
+}
+
+/* Styles for React Menu */
+
+li {
+  display: inline;
+  padding-right: 50px;
+  font-weight: bold;
+}
+
+ul {
+  text-align: center;
+}
+
+.aboutDiv {
+  padding-top: 25px;
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight:bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cvDiv {
+  display: none;
+}
