@@ -33,39 +33,48 @@
           );
         }
       });
-      React.render(
+
+      var Site = React.createClass({
+        render: function() {
+          return (
+            <div>
+            <div id="headcontent" className="headcontent"><Header title="@davemeetsworld" /></div>
+            <div id="headmenucontent" className="headmenucontent"><HeaderMenu /></div>
+            <div id="aboutDiv" className="aboutDiv">
+                  <p class = "about-text">
+                  My name is David Baker, I'm a freelance software engineer and i hail from Derbyshire. I work in a variety of languages including, Java, PHP and JavaScript.
+                  </p>
+                  <p>
+                    I like solving problems, adding value, snowboarding and chess.
+                  </p>
+                  <p>
+                    I have worked in a diverse set of industries such as SCADA and Telemetry, Telecoms, Gaming and E-Commerce.
+                  </p>
+
+                  <p> I'm ocassionaly available for hire. </p>
+
+                  <p> dave@davemeetsworld.com </p>
+            </div>
+            </div>
+          );
+        }
+      })
+      /*React.render(
         <Header title="@davemeetsworld" />,
         document.getElementById('headcontent')
       );
       React.render(
         <HeaderMenu />,
         document.getElementById("headmenucontent")
-      )
+      )*/
+      React.render(<Site />, document.getElementById('sitecontainer'));
+
+
     </script>
   </head>
   <body>
-    <div class="sitecontainer">
-      <div id="headcontent" class="headcontent"></div>
-      <div id="headmenucontent" class="headmenucontent"></div>
-      <div id="aboutDiv" class="aboutDiv">
-            <p class = "about-text">
-              My name is David Baker, I'm a freelance software engineer and i hail from Derbyshire. I work in a variety of languages including, Java, PHP and JavaScript.
-            </p>
-            <p>
-              I like solving problems, adding value, snowboarding and chess.
-            </p>
-            <p>
-              I have worked in a diverse set of industries such as SCADA and Telemetry, Telecoms, Gaming and E-Commerce.
-            </p>
+    <div id='sitecontainer' class="sitecontainer">
 
-            <p> I'm ocassionaly available for hire. </p>
-
-            <p> dave@davemeetsworld.com </p>
-      </div>
-      <div id="cvDiv" class="cvDiv">
-	<a href="">David Baker.pdf</a>
-      </div>
     </div>
   </body>
 </html>
-
