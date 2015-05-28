@@ -10,7 +10,7 @@
       var HeaderMenu = React.createClass({
         render: function() {
             return (
-              <div>
+              <div id="headmenucontent" className="headmenucontent">
                 <ul className="under-title-menu">
                   <li> <a href ="#">About</a> </li>
                   <li> <a>CV</a> </li>
@@ -26,9 +26,11 @@
       var Header = React.createClass({
         render: function() {
           return (
-            <div className="headerTitle">
-              <div className="imghead"><h1 className="titletext">{ this.props.title }</h1></div>
-              <div className="imghead"><img className="pic" src="img/profpic.png" /></div>
+            <div id="headcontent" className="headcontent">
+              <div className="headerTitle">
+                <div className="imghead"><h1 className="titletext">{ this.props.title }</h1></div>
+                <div className="imghead"><img className="pic" src="img/profpic.png" /></div>
+              </div>
             </div>
           );
         }
@@ -38,8 +40,8 @@
         render: function() {
           return (
             <div>
-            <div id="headcontent" className="headcontent"><Header title="@davemeetsworld" /></div>
-            <div id="headmenucontent" className="headmenucontent"><HeaderMenu /></div>
+            <Header title="@davemeetsworld" />
+            <HeaderMenu />
             <div id="aboutDiv" className="aboutDiv">
                   <p class = "about-text">
                   My name is David Baker, I'm a freelance software engineer and i hail from Derbyshire. I work in a variety of languages including, Java, PHP and JavaScript.
@@ -58,9 +60,9 @@
             </div>
           );
         }
-      })
-      
-	React.render(<Site />, document.getElementById('sitecontainer'));
+      });
+
+      React.render(<Site />, document.getElementById('sitecontainer'));
 
 
     </script>
