@@ -1,21 +1,22 @@
+
 <html>
   <head>
     <title>davemeetsworld</title>
     <script src="https://fb.me/react-0.13.3.js"></script>
     <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700italic' rel='stylesheet' type='text/css'>
     <script type="text/jsx">
       var HeaderMenu = React.createClass({
         render: function() {
             return (
-              <div id="headmenucontent" className="headmenucontent">
+              <div>
                 <ul className="under-title-menu">
                   <li> <a href ="#">About</a> </li>
-                  <li> <a>CV</a> </li>
+                  <li> <a href="https://www.linkedin.com/in/david-baker-1a4a0131/">CV</a> </li>
+                  <li> <a href="https://keybase.io/davemeetsworld">Public Certs</a></li>
                   <li> <a href="http://www.github.com/davemeetsworld">My Code</a> </li>
-                  <li> <a href="http://www.facebook.com/davemeetsworld">Facebook</a></li>
                   <li> <a href="http://www.twitter.com/davemeetsworld">Twitter</a> </li>
                 </ul>
               </div>
@@ -26,50 +27,45 @@
       var Header = React.createClass({
         render: function() {
           return (
-            <div id="headcontent" className="headcontent">
-              <div className="headerTitle">
-                <div className="imghead"><h1 className="titletext">{ this.props.title }</h1></div>
-                <div className="imghead"><img className="pic" src="img/profpic.png" /></div>
-              </div>
+            <div className="headerTitle">
+              <div className="imghead"><h1 className="titletext">{ this.props.title }</h1></div>
+              <div className="imghead"><img className="pic" src="profpic.png" /></div>
             </div>
           );
         }
       });
-
-      var Site = React.createClass({
-        render: function() {
-          return (
-            <div>
-            <Header title="@davemeetsworld" />
-            <HeaderMenu />
-            <div id="aboutDiv" className="aboutDiv">
-                  <p class = "about-text">
-                  My name is David Baker, I'm a freelance software engineer and i hail from Derbyshire. I work in a variety of languages including, Java, PHP and JavaScript.
-                  </p>
-                  <p>
-                    I like solving problems, adding value, snowboarding and chess.
-                  </p>
-                  <p>
-                    I have worked in a diverse set of industries such as SCADA and Telemetry, Telecoms, Gaming and E-Commerce.
-                  </p>
-
-                  <p> I'm ocassionaly available for hire. </p>
-
-                  <p> dave@davemeetsworld.com </p>
-            </div>
-            </div>
-          );
-        }
-      });
-
-      React.render(<Site />, document.getElementById('sitecontainer'));
-
-
+      React.render(
+        <Header title="@davemeetsworld" />,
+        document.getElementById('headcontent')
+      );
+      React.render(
+        <HeaderMenu />,
+        document.getElementById("headmenucontent")
+      )
     </script>
   </head>
   <body>
-    <div id='sitecontainer' class="sitecontainer">
+    <div class="sitecontainer">
+      <div id="headcontent" class="headcontent"></div>
+      <div id="headmenucontent" class="headmenucontent"></div>
+      <div id="aboutDiv" class="aboutDiv">
+            <p class = "about-text">
+              My name is David Baker, I'm a freelance software engineer and i hail from Derbyshire. I work in a variety of languages including, Java, PHP and JavaScript.
+            </p>
+            <p>
+              I like solving problems, adding value, snowboarding and chess.
+            </p>
+            <p>
+              I have worked in a diverse set of industries such as SCADA and Telemetry, Telecoms, Gaming and E-Commerce.
+            </p>
 
+            <p> I'm ocassionaly available for hire. </p>
+
+            <p> dave@davemeetsworld.com </p>
+      </div>
+      <div id="cvDiv" class="cvDiv">
+	<a href="">David Baker.pdf</a>
+      </div>
     </div>
   </body>
 </html>
